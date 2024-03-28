@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "79a4d1be-bb2a-4fca-8147-97d58d00eee4",
+		"name": "HumaineAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Live",
+			"item": [
+				{
+					"name": "getRegisteredCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY29tbW9uIl0sInVzZXJfbmFtZSI6ImFkbWluQGJyYWludmlyZS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiLCJ0cnVzdCJdLCJleHAiOjE2NzIyMjAzODAsImF1dGhvcml0aWVzIjpbIlJPTEVfU1VQRVJBRE1JTiIsIkNVU1RPTUVSX0RFTEVURSIsIkNVU1RPTUVSX1ZJRVciLCJDVVNUT01FUl9MSVNUIiwiQ1VTVE9NRVJfRURJVCJdLCJqdGkiOiI0MDgxM2NiNC1lMGQwLTQ2ZjktODhhNC01M2QwZGEwZjUyZDEiLCJjbGllbnRfaWQiOiJjb21tb24ifQ.yMzzf7M-xRGzeg5kM9CuvVgC4k2Sp1RkSTuUvjaMctQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "version",
+								"value": "V1",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://aa.dev.nonprod.bodegaswimwear.com/humaine/admin/api/home/getRegisteredCustomers",
+							"protocol": "https",
+							"host": [
+								"aa",
+								"dev",
+								"nonprod",
+								"bodegaswimwear",
+								"com"
+							],
+							"path": [
+								"humaine",
+								"admin",
+								"api",
+								"home",
+								"getRegisteredCustomers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiIrSU03dHFtelZxU092RGlnWGMrV2JldlY4TkhRYW1CR2lHQTBScEJTalpnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJlOGYxMDJjMy0wNGZhLTQyMDgtYjFlMy03ODgyZDYxZGY3NDUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfcWtHNHJyRkpLIiwiY29nbml0bzp1c2VybmFtZSI6ImU4ZjEwMmMzLTA0ZmEtNDIwOC1iMWUzLTc4ODJkNjFkZjc0NSIsIm9yaWdpbl9qdGkiOiJjMjY0NTgxNi05YWQ3LTRiY2YtYjZjMC01ZjE5OTg1YzU0YWUiLCJhdWQiOiI1NG1wa2FvNjVpY2FzZ25hdWN0dTA1M2JrZCIsImV2ZW50X2lkIjoiNGNkNTZmYWEtZDhmMC00MWI0LThmNTMtOWNjMDI5MmY0Yzg5IiwiY3VzdG9tOnVzZXJuYW1lIjoiRHIuU2ViaSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjcyMTQ1NjIwLCJleHAiOjE2NzIxNDkyMjAsImlhdCI6MTY3MjE0NTYyMCwianRpIjoiY2ZmYjE4MWUtZjM4NS00ZDI5LWE4OGMtZmYzMGIxZWExNGJhIiwiZW1haWwiOiJkaGF2YWwrMjFAaHVtYWluZWFpLmNvbSJ9.oNwTOeSeH3sjwAmm6pzcyQK0bSjt3c4hCr207uzd-ytxMOwr4Tn9Q49v6uLJn9zS4slOCRFZX60veRDDYqRn3YTLugfIMZTYmhPbqOiUy8qP86AL0HdrJtnrEPVAZpvIAvgkw91oBohDe3TfRlibVMBgL62_vZeSI5Q6WWEQd-0020zrB9Mnrbd8dqBlUK80Q1vUeGt3gwwSdEpjmYgpqTe2S53wEzVmxjlXVORejSwAY7v9B-x70YcS_N1VawS2Li8s_XQF2R2K3GBJFR1f16LhqvtEJylgfuqJPoO14wifrBFlHHQN_naS9HVrvIl8D2KTDR5XaDGM6y_ZEDhuqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "version",
+								"value": "v1",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://pta.dev.nonprod.bodegaswimwear.com/humaine/portal/api/dashboard",
+							"protocol": "https",
+							"host": [
+								"pta",
+								"dev",
+								"nonprod",
+								"bodegaswimwear",
+								"com"
+							],
+							"path": [
+								"humaine",
+								"portal",
+								"api",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateShopifyStore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "wAZO1B8D+MUWDQIrrD749tfpRkkTPX4pmg2yGbsV3no=",
+								"type": "default"
+							},
+							{
+								"key": "version",
+								"value": "v1",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountID\": 305,\n    \"storeURL\": \"https://tester-zone-12.myshopify.com\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dca.dev.nonprod.bodegaswimwear.com/humaine/collection/api/userEvent/validateStore",
+							"protocol": "https",
+							"host": [
+								"dca",
+								"dev",
+								"nonprod",
+								"bodegaswimwear",
+								"com"
+							],
+							"path": [
+								"humaine",
+								"collection",
+								"api",
+								"userEvent",
+								"validateStore"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "getRegisteredCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY29tbW9uIl0sInVzZXJfbmFtZSI6ImFkbWluQGJyYWludmlyZS5jb20iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiLCJ0cnVzdCJdLCJleHAiOjE2NzIyNDEyNzMsImF1dGhvcml0aWVzIjpbIlJPTEVfU1VQRVJBRE1JTiIsIkNVU1RPTUVSX0RFTEVURSIsIkNVU1RPTUVSX1ZJRVciLCJDVVNUT01FUl9MSVNUIiwiQ1VTVE9NRVJfRURJVCJdLCJqdGkiOiIyNTNiMzc4MC0xZjg3LTRlNjgtYTI5Zi0wZDE4NDQwZjE4ZTUiLCJjbGllbnRfaWQiOiJjb21tb24ifQ.KaUUyT2hTZEByDuo7SXyMLu1F_FMV-kiwGuGIopGdMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Version",
+								"value": "V1",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8083/humaine/admin/api/home/getRegisteredCustomers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"humaine",
+								"admin",
+								"api",
+								"home",
+								"getRegisteredCustomers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiIrSU03dHFtelZxU092RGlnWGMrV2JldlY4TkhRYW1CR2lHQTBScEJTalpnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyMTc0ZDNkOS03MzJhLTQwNzYtYTg5Ny0xYjNmMDQ3MmFiOTYiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfcWtHNHJyRkpLIiwiY29nbml0bzp1c2VybmFtZSI6IjIxNzRkM2Q5LTczMmEtNDA3Ni1hODk3LTFiM2YwNDcyYWI5NiIsIm9yaWdpbl9qdGkiOiI1YjYxY2I5OC1kNWYwLTQ2MGItOTZmZi02ZTIwMTkzMWVlZDEiLCJhdWQiOiI1NG1wa2FvNjVpY2FzZ25hdWN0dTA1M2JrZCIsImV2ZW50X2lkIjoiNjkyODdkNmMtNWMwZi00NmZjLWE5NmItMDZhMzQ1MjM0YTgzIiwiY3VzdG9tOnVzZXJuYW1lIjoiamF5MTAxIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NzIyMjUzNzgsImV4cCI6MTY3MjIyODk3OCwiaWF0IjoxNjcyMjI1Mzc4LCJqdGkiOiIxNWEzYWYxNS0yOGZkLTQ0NjItYjZiMS1lNTg4YmFlMWRhZTciLCJlbWFpbCI6ImpheSsxMDFAaHVtYWluZWFpLmNvbSJ9.QRIZlcCI5YL2-m6eCPctsDuKXf9w1PSzB40b1pgIXUWOi4oDGe7IhMszA8CcjSRnak5gsBHdodXsMunx6e2LH93B5hxvVxx4dMgRfyeUDz4PdsYRF_pRuLEexUOFzHoM47R5WYFKVEj2EN3J__rLBQWXSLxdiqpyqaBjSy2ElPesw-zRpZSPwx1XJhTK3zgpAM_MyauN9fnBy298iRb7vINeELj_pF-ADU5CLSMGdS80JL0NFKtTwYd9dy5l_TQEmEsJO_1TIs-Yu6BysCzWnZ19DrKB1PA7XGfVpoYQcVZ6JbdKsiqGT8CNwd9I6UQNk3EvE1ExPi2Sj-8ifG8itA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "version",
+								"value": "v1",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8084/humaine/portal/api/dashboard?userName=dhaval%2b21@humaineai.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"humaine",
+								"portal",
+								"api",
+								"dashboard"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "dhaval%2b21@humaineai.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "oauthToken",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin@brainvire.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Brain@2022",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "common",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "Brain@2020",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/humaine/admin/api/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"humaine",
+								"admin",
+								"api",
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateWebStoreURL",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "wAZO1B8D+MUWDQIrrD749tfpRkkTPX4pmg2yGbsV3no=",
+								"type": "default"
+							},
+							{
+								"key": "version",
+								"value": "v1",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"storeURL\": \"www.google12.com\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/humaine/portal/api/validateWebStore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"humaine",
+								"portal",
+								"api",
+								"validateWebStore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateStoreShopify",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "wAZO1B8D+MUWDQIrrD749tfpRkkTPX4pmg2yGbsV3no=",
+								"type": "default"
+							},
+							{
+								"key": "version",
+								"value": "v1",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountID\": 305,\n    \"storeURL\": \"https://tester-zone-2.myshopify.com\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/humaine/collection/api/userEvent/validateStore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"humaine",
+								"collection",
+								"api",
+								"userEvent",
+								"validateStore"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

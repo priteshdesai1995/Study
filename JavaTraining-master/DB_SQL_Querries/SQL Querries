@@ -1,0 +1,84 @@
+create database Department;
+
+
+use Student;
+create table Stud_det(id int primary key, Sname varchar(50), Dname varchar(50));
+insert into Stud_det values (1,"swap","it");
+insert into Stud_det values (2,"sahil","auto");
+insert into Stud_det values (3,"mukesh","mech");
+insert into Stud_det values (4,"maddy","co");
+
+
+select * from Stud_det;
+select * from Stud_det where id=4;
+select * from Stud_det where Dname="it";
+
+
+select * from Stud_det where Dname <> "auto"; 
+select * from Stud_det where Dname="it" or Dname="co";
+
+select * from Stud_det where Sname like "s%";
+select * from Stud_det where Sname like "%y";
+select * from Stud_det where Sname like "s";
+
+
+select * from Stud_det where Dname in ("auto","mech");
+select * from Stud_det where Dname not in ("auto","mech");
+
+
+select * from Stud_det order by Dname;
+select * from Stud_det order by id desc;
+
+
+create table Dept_det(Did int , Dname varchar(50));
+insert into Dept_det values (1,"It");
+insert into Dept_det values (2,"Co");
+insert into Dept_det values (3,"Auto");
+insert into Dept_det values (4,"Mech");
+
+
+select * from Stud_det join Dept_det On Stud_det.id = Dept_det.Did;
+
+select * from Stud_det inner join Dept_det On Stud_det.id = Dept_det.Did;
+
+select * from Stud_det join Dept_det On Stud_det.id = Dept_det.Did;
+
+select * from Stud_det left join Dept_det On Stud_det.id = Dept_det.Did;
+select * from Stud_det right join  Dept_det On Stud_det.id = Dept_det.Did;
+
+select * from Stud_det group by Sname;
+
+
+
+select count(*) from Stud_det;
+select avg(id) from Stud_det;
+select sum(id) from Stud_det;
+select min(id) from Stud_det;
+select max(id) from Stud_det;
+
+
+
+create table Dept_det2(Did int , Dname varchar(50));
+insert into Dept_det2 values (1,"It");
+insert into Dept_det2 values (2,"Co");
+insert into Dept_det2 values (2,"Co");
+insert into Dept_det2 values (3,"civil");
+insert into Dept_det2 values (4,"marine");
+
+
+select * from Dept_det;
+
+select * from Dept_det where Dname = "it" union select * from Dept_det2 where Dname="co" ;
+select * from Dept_det where Dname = "it" union all select * from Dept_det2 where Dname="co" ;
+
+select * from Stud_det where id = (Select * from Stud_det where Sname = "swap");
+select * from Stud_det where Sname in (Select * from Stud_det where Sname = "swap");
+
+use Student;
+delete from Stud_det where id = 2;
+delete from Dept_det where id = 2;
+select * from Stud_det;
+
+update Stud_det set Sname = "madhuri " where id = 4;
+select * from Stud_det;
+

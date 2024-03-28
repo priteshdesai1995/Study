@@ -1,0 +1,20 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%
+	// just create some sample data ... normally provided by MVC
+	String[] names = {"Meena", "Siya", "Priya"};
+
+	pageContext.setAttribute("Names", names);
+%>
+
+<html>
+<body>
+
+<h1> Use of jstl core tags using for each methods.</h1>
+	<c:forEach var="temp" items="${Names}">
+		
+		${temp} <br/>
+		
+	</c:forEach>
+</body>
+</html>-

@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "a4ff655d-ca60-4b0c-b994-b1754caef20e",
+		"name": "MicroService_Udemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "addAccounts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"pritesh\",\n    \"email\": \"pritesh@gmail.com\",\n    \"mobileNumber\": \"7405122634\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchCustomerByPhoneNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/fetch?mobileNumber=7405122634",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "7405122634"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"pritesh123\",\n    \"email\": \"pritesh@gmail.com\",\n    \"mobileNumber\": \"7405122634\",\n    \"accountsDto\": {\n        \"accountNumber\": 6256539,\n        \"accountType\": \"Current\",\n        \"branchAddress\": \"123 Main Street, New York\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccountByPhoneNumber",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete?mobileNumber=7405122634",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "7405122634"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnviromentProperty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getEnviromentProperty",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getEnviromentProperty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEnviromentPropertyFromApplicationProperty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getEnviromentPropertyContactInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getEnviromentPropertyContactInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadTheSystemProperties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getThePortNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getThePortNumber"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loans",
+			"item": []
+		},
+		{
+			"name": "Cards",
+			"item": []
+		},
+		{
+			"name": "decryptApi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "6597777bffff3f7d8093357d367866e42d619bf302cc858da4ade32abd5e8cbfec7dc65aee58e3c8452a46b843a5d35c"
+				},
+				"url": {
+					"raw": "http://localhost:8071/decrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8071",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "encryptApi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "priteshdesai811Dev@gmail.com"
+				},
+				"url": {
+					"raw": "http://localhost:8071/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8071",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuatorRefreshApiToLoadNewConfig",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusRefreshWithRabbitMQ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/busrefresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"busrefresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

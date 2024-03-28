@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "6307619a-9531-463f-8a97-f4c0b58022a8",
+		"name": "Humaine Data Collection API",
+		"description": "This set of APIs is used for user evnt data collection across E-comm websites\n\nContact Support:\n Email: prithviraj@humaineai.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user Event",
+			"item": [
+				{
+					"name": "Capture User Event data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountID\": -84056025.35584697,\n  \"eventID\": \"NEWSLETTER_SUBSCRIBE\",\n  \"sessionID\": \"aliqua consequat \",\n  \"userID\": \"voluptate veniam Ut exercitation magna\",\n  \"deviceID\": \"sed in\",\n  \"deviceType\": \"in\",\n  \"productID\": \"do est\",\n  \"city\": \"velit et\",\n  \"country\": \"commodo minim aute\",\n  \"state\": \"et labore anim\",\n  \"pageURL\": \"tempor ullamco\",\n  \"pageLoadTime\": -2759903,\n  \"latitude\": 99847129.08097535,\n  \"longitude\": 31498681.568722636,\n  \"menuId\": \"consectetur\",\n  \"menuName\": \"dolor voluptate\",\n  \"menuURL\": \"a\",\n  \"postId\": \"non\",\n  \"postTitle\": \"voluptate et\",\n  \"productMetaData\": {},\n  \"productQuantity\": 92370397.91805479,\n  \"saleAmount\": 96274275.63469529,\n  \"socialMediaPlateForm\": \"ullamco in incididunt elit pariatur\",\n  \"socialMediaURL\": \"Excepteur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/userEvent",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"userEvent"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 200,\n  \"status\": \"SUCCESS\",\n  \"responseData\": {\n    \"code\": \"SUCC001\",\n    \"msg\": \"User Event Data saved successfully\"\n  }\n}"
+						},
+						{
+							"name": "Invalid request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Service not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Business error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": 500,\n  \"status\": \"ERROR\",\n  \"errorList\": [\n    {\n      \"code\": \"ERR001\",\n      \"msg\": \"Business error occurred\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "page Load data captured from from E-comm site",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "version",
+								"value": "v1"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountID\": -31478880,\n  \"pageLoadTime\": 83763143,\n  \"pageSource\": \"irure cillum dolor Lorem id\",\n  \"pageURL\": \"eu\",\n  \"performanceData\": {},\n  \"sessionID\": \"nisi consectetur\",\n  \"userID\": \"non sit ex est\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/userEvent/pageLoad",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"userEvent",
+								"pageLoad"
+							]
+						},
+						"description": "page Load data captured from from E-comm site"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "Authorization",
+										"value": "Bearer <access_token>"
+									},
+									{
+										"description": "(Required) ",
+										"key": "version",
+										"value": "v1"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent/pageLoad",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent",
+										"pageLoad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"statusCode\": -25478537,\n  \"status\": \"ERROR\",\n  \"responseData\": {\n    \"timeout\": 58897042\n  },\n  \"errorList\": [\n    {\n      \"code\": \"sed laboris pariatur cupidatat\",\n      \"msg\": \"aliquip officia dolore incididu\"\n    },\n    {\n      \"code\": \"aliqua sit c\",\n      \"msg\": \"dolor aliqua id\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "Authorization",
+										"value": "Bearer <access_token>"
+									},
+									{
+										"description": "(Required) ",
+										"key": "version",
+										"value": "v1"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent/pageLoad",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent",
+										"pageLoad"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "Authorization",
+										"value": "Bearer <access_token>"
+									},
+									{
+										"description": "(Required) ",
+										"key": "version",
+										"value": "v1"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent/pageLoad",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent",
+										"pageLoad"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "Authorization",
+										"value": "Bearer <access_token>"
+									},
+									{
+										"description": "(Required) ",
+										"key": "version",
+										"value": "v1"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent/pageLoad",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent",
+										"pageLoad"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "Authorization",
+										"value": "Bearer <access_token>"
+									},
+									{
+										"description": "(Required) ",
+										"key": "version",
+										"value": "v1"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/userEvent/pageLoad",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"userEvent",
+										"pageLoad"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Capture Session Timeout data for Account ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/sessionTimeout/:accountID",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sessionTimeout",
+						":accountID"
+					],
+					"variable": [
+						{
+							"key": "accountID",
+							"value": "officia",
+							"description": "(Required) Account id of e-comm site"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful operation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/sessionTimeout/:accountID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessionTimeout",
+								":accountID"
+							],
+							"variable": [
+								{
+									"key": "accountID",
+									"value": "officia",
+									"description": "(Required) Account id of e-comm site"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"statusCode\": 200,\n  \"status\": \"SUCCESS\",\n  \"responseData\": {\n    \"timeout\": 3600\n  }\n}"
+				},
+				{
+					"name": "Invalid request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/sessionTimeout/:accountID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessionTimeout",
+								":accountID"
+							],
+							"variable": [
+								{
+									"key": "accountID",
+									"value": "officia",
+									"description": "(Required) Account id of e-comm site"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Service not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/sessionTimeout/:accountID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessionTimeout",
+								":accountID"
+							],
+							"variable": [
+								{
+									"key": "accountID",
+									"value": "officia",
+									"description": "(Required) Account id of e-comm site"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Business error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/sessionTimeout/:accountID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessionTimeout",
+								":accountID"
+							],
+							"variable": [
+								{
+									"key": "accountID",
+									"value": "officia",
+									"description": "(Required) Account id of e-comm site"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"statusCode\": 500,\n  \"status\": \"ERROR\",\n  \"errorList\": [\n    {\n      \"code\": \"ERR001\",\n      \"msg\": \"Business error occurred\"\n    }\n  ]\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

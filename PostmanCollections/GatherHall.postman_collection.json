@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "a37eaf97-3fd2-4cff-abba-eafba033c4ec",
+		"name": "GatherHall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addUserDevices",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1234567890",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"deviceToken\": \"eKbhnrXxSNOsy3j2ARaq5e:APA91bEOGAlPNUjjO-2qM4-9f59CYJ37A_2eOH8y0K876dPC_UVCXkGHV8TXyjRJVFQM_nl078tynb-0lTQwZVXBcMTirP-SrUeF0WsGMjwIyscgEtr6S6UegUFxgzhjeZx5nbBOg4J5\",\n  \"deviceType\": \"ANDROID\",\n  \"jid\": \"174a6d43726046099476eccc14881ef5@openfire.gatherhall.com\",\n  \"userName\": \"174a6d43726046099476eccc14881ef5\",\n  \"voipToken\": null \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://openfire.gatherhall.com/plugins/restapi/v1/users/device/",
+					"protocol": "https",
+					"host": [
+						"openfire",
+						"gatherhall",
+						"com"
+					],
+					"path": [
+						"plugins",
+						"restapi",
+						"v1",
+						"users",
+						"device",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1234567890",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://openfire.gatherhall.com/plugins/restapi/v1/users/",
+					"protocol": "https",
+					"host": [
+						"openfire",
+						"gatherhall",
+						"com"
+					],
+					"path": [
+						"plugins",
+						"restapi",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByUserName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1234567890",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://openfire.gatherhall.com/plugins/restapi/v1/users/01a5ba66de594125a2238dc6b7c6b191",
+					"protocol": "https",
+					"host": [
+						"openfire",
+						"gatherhall",
+						"com"
+					],
+					"path": [
+						"plugins",
+						"restapi",
+						"v1",
+						"users",
+						"01a5ba66de594125a2238dc6b7c6b191"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

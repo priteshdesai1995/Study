@@ -1,0 +1,832 @@
+{
+	"info": {
+		"_postman_id": "13cf01e5-c9e5-4e6c-8d9e-548469cc3a23",
+		"name": "Skeleton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FAQ",
+			"item": [
+				{
+					"name": "Create FAQ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"answer\": \"test ans\",\n  \"created_at\": \"2022-09-15T09:13:15.386Z\",\n  \"faq_topic_id\": \"fae0f703-ccba-4abd-8c5c-ff6e349e6149\",\n  \"locale\": \"en\",\n  \"question\": \"test\",\n  \"status\": \"ACTIVE\",\n  \"topic_name\": \"test data\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/faq/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"faq",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Active FAQ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/faq/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"faq",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get FAQ Topic List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/faq/faqTopic/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"faq",
+								"faqTopic",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change FAQ Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"c0c38fd9-44fc-4dce-b0dd-4780ec11c056\",\n  \"status\": \"ACTIVE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/faq/changeStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"faq",
+								"changeStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get FAQ by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/faq/get/c0c38fd9-44fc-4dce-b0dd-4780ec11c056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"faq",
+								"get",
+								"c0c38fd9-44fc-4dce-b0dd-4780ec11c056"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update FAQ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"answer\": \"testtt\",\n  \"created_at\": \"2022-09-15T10:18:26.366Z\",\n  \"faq_topic_id\": \"fae0f703-ccba-4abd-8c5c-ff6e349e6149\",\n  \"locale\": \"en\",\n  \"question\": \"testtt\",\n  \"status\": \"ACTIVE\",\n  \"topic_name\": \"testtt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/faq/update/c0c38fd9-44fc-4dce-b0dd-4780ec11c056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"faq",
+								"update",
+								"c0c38fd9-44fc-4dce-b0dd-4780ec11c056"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete FAQ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/faq/delete/c0c38fd9-44fc-4dce-b0dd-4780ec11c056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"faq",
+								"delete",
+								"c0c38fd9-44fc-4dce-b0dd-4780ec11c056"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "Create Survey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"sss\",\"description\":\"sss\",\"survey_status\":\"Inprogress\",\"status\":\"Active\",\"department_ids\":[\"72acfabb-0eb8-494d-b99b-71ecb9b9dbf3\"],\"location_ids\":[\"72acfabb-0eb8-494d-b99b-71ecb9b9dbf3\"],\"survey_start_date\":\"2022-09-13\",\"survey_end_date\":\"2022-09-29\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"surveyId\": \"678214e0-5334-4393-b898-6eaf34ca687e\", \"status\": \"false\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/update_status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"update_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Survey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/delete?surveyId=99b4e479-a7bc-4b8c-bce2-0cf01816aafe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "surveyId",
+									"value": "99b4e479-a7bc-4b8c-bce2-0cf01816aafe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Survey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"test5\",\n  \"status\": false,\n  \"surveyTitle\": \"test2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/update?surveyId=f2234d0e-1d58-42f4-8397-2c0348f56429",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"update"
+							],
+							"query": [
+								{
+									"key": "surveyId",
+									"value": "f2234d0e-1d58-42f4-8397-2c0348f56429"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Survey by Survey Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/get_survey?surveyId=678214e0-5335-4393-b898-6eaf34ca687e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"get_survey"
+							],
+							"query": [
+								{
+									"key": "surveyId",
+									"value": "678214e0-5335-4393-b898-6eaf34ca687e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Survey Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"answerType\": \"test\",\n    \"answers\": [\n      {\n        \"answer\": \"test\",\n        \"answerType\": \"test\",\n        \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n        \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n        \"question\": {\n          \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n          \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n          \"question\": \"test?\",\n          \"survey\": {\n            \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n            \"description\": \"desc\",\n            \"endDate\": \"2022-09-07T11:11:29.626Z\",\n            \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n            \"startDate\": \"2022-09-07T11:11:29.626Z\",\n            \"status\": \"string\",\n            \"surveyStatus\": \"PENDING\",\n            \"surveyTitle\": \"title\",\n            \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n          },\n          \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n        },\n        \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n      }\n    ],\n    \"question\": {\n      \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n      \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n      \"question\": \"test ques?\",\n      \"survey\": {\n        \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n        \"description\": \"desc\",\n        \"endDate\": \"2022-09-07T11:11:29.626Z\",\n        \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n        \"startDate\": \"2022-09-07T11:11:29.626Z\",\n        \"status\": \"done\",\n        \"surveyStatus\": \"PENDING\",\n        \"surveyTitle\": \"title\",\n        \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n      },\n      \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n    }\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/add_questions?surveyId=678214e0-5335-4393-b898-6eaf34ca687e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"add_questions"
+							],
+							"query": [
+								{
+									"key": "surveyId",
+									"value": "678214e0-5335-4393-b898-6eaf34ca687e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Survey Questions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"answerType\": \"test\",\n    \"answers\": [\n      {\n        \"answer\": \"test\",\n        \"answerType\": \"test\",\n        \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n        \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n        \"question\": {\n          \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n          \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n          \"question\": \"test Update?\",\n          \"survey\": {\n            \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n            \"description\": \"desc\",\n            \"endDate\": \"2022-09-07T11:11:29.626Z\",\n            \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n            \"startDate\": \"2022-09-07T11:11:29.626Z\",\n            \"status\": \"string\",\n            \"surveyStatus\": \"PENDING\",\n            \"surveyTitle\": \"title\",\n            \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n          },\n          \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n        },\n        \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n      }\n    ],\n    \"question\": {\n      \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n      \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n      \"question\": \"test Update?\",\n      \"survey\": {\n        \"createdDate\": \"2022-09-07T11:11:29.626Z\",\n        \"description\": \"desc\",\n        \"endDate\": \"2022-09-07T11:11:29.626Z\",\n        \"id\": \"678214e0-5335-4393-b898-6eaf34ca687e\",\n        \"startDate\": \"2022-09-07T11:11:29.626Z\",\n        \"status\": \"done\",\n        \"surveyStatus\": \"PENDING\",\n        \"surveyTitle\": \"title\",\n        \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n      },\n      \"updatedDate\": \"2022-09-07T11:11:29.626Z\"\n    }\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/update_questions?surveyId=678214e0-5335-4393-b898-6eaf34ca687e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"update_questions"
+							],
+							"query": [
+								{
+									"key": "surveyId",
+									"value": "678214e0-5335-4393-b898-6eaf34ca687e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Survey List with sort  ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"columnName\": \"survey_id\",\n  \"department_ids\": [\n    0\n  ],\n  \"description\": \"test\",\n  \"endRec\": \"2\",\n  \"location_ids\": [\n    0\n  ],\n  \"order\": 0,\n  \"sort_param\": \"survey_id\",\n  \"sort_type\": \"ASC\",\n  \"sortingOrder\": \"\",\n  \"startRec\": 0,\n  \"status\": \"true\",\n  \"survey_end_date\": \"\",\n  \"survey_start_date\": \"\",\n  \"survey_status\": \"\",\n  \"title\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detailed Survey",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/get_detailed_survey?surveyId=678214e0-5335-4393-b898-6eaf34ca687e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"get_detailed_survey"
+							],
+							"query": [
+								{
+									"key": "surveyId",
+									"value": "678214e0-5335-4393-b898-6eaf34ca687e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Questions by Survey Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/survey/get_questions?surveyId=678214e0-5335-4393-b898-6eaf34ca687e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"survey",
+								"get_questions"
+							],
+							"query": [
+								{
+									"key": "surveyId",
+									"value": "678214e0-5335-4393-b898-6eaf34ca687e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "State",
+			"item": [
+				{
+					"name": "Get State By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/base/api/state/get/88f290e2-e75f-41e1-a79c-3830e9c56d34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"base",
+								"api",
+								"state",
+								"get",
+								"88f290e2-e75f-41e1-a79c-3830e9c56d34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Oauth Skeleton",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/base/api/oauth/token?grant_type=password&username=admin&password=Brain@2021&client_id=common&client_secret=Brain@2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"base",
+						"api",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "Brain@2021"
+						},
+						{
+							"key": "client_id",
+							"value": "common"
+						},
+						{
+							"key": "client_secret",
+							"value": "Brain@2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addicon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/home/pritesh_desai/Pictures/Screenshot from 2022-09-06 15-16-02.png"
+						},
+						{
+							"key": "feviCon",
+							"type": "file",
+							"src": "/home/pritesh_desai/Pictures/Screenshot from 2022-09-12 19-14-17.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/base/api/configuration/updateimage/Willa%20Daniel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"base",
+						"api",
+						"configuration",
+						"updateimage",
+						"Willa%20Daniel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

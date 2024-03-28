@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "3ae0784b-d0a3-4b13-a384-08b6d7452990",
+		"name": "Neuromore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TokenGenerateAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/neuromore-server/api/systems/USER_PORTAL/admin/login?password=admin1&version=latest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"neuromore-server",
+						"api",
+						"systems",
+						"USER_PORTAL",
+						"admin",
+						"login"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "admin1"
+						},
+						{
+							"key": "version",
+							"value": "latest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByIdAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/neuromore-server/api/users/admin/get?token=YTgxMDViYzItM2NmMy00NDI0LThlMGQtMjY5OTE2NmEyZTRj",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"neuromore-server",
+						"api",
+						"users",
+						"admin",
+						"get"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "YTgxMDViYzItM2NmMy00NDI0LThlMGQtMjY5OTE2NmEyZTRj"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserChilderns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/neuromore-server/api/users/admin/children/get?token=YTgxMDViYzItM2NmMy00NDI0LThlMGQtMjY5OTE2NmEyZTRj",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"neuromore-server",
+						"api",
+						"users",
+						"admin",
+						"children",
+						"get"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "YTgxMDViYzItM2NmMy00NDI0LThlMGQtMjY5OTE2NmEyZTRj"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "7f9e6bd9-6c34-4e62-a9c2-4a0708c6fd43",
+		"name": "CP7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "token ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loginId\": \"testbvuser@mailinator.com\",\n    \"password\": \"Brain123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8123/app/login/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8123",
+					"path": [
+						"app",
+						"login",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
